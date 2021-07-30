@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
-
+// * FULLY TESTED ROUTES FOR THIS FILE DIRECTORY //
 // * TESTED AND WORKS AS INTENDED
 router.get('/', async (req, res) => {
   // find all categories
