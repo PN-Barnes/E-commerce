@@ -70,7 +70,7 @@ router.post('/', async (req, res) => {
     });
 });
 
-
+// ! NEED TO DEBUG AND RUN TEST
 // update product
 router.put('/:id', (req, res) => {
   // update product data
