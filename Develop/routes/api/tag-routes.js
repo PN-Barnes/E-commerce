@@ -34,15 +34,26 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', (req, res) => {
+// * SUCCESSFUL ROUTE FOR TAG CREATION W/ ONLY TAG_NAME
+router.post('/', async (req, res) => {
   // create a new tag
+  try {
+    const tagCreate = await Tag.create({
+      tag_name: req.body.tag_name
+    })
+    res.status(200).json({message: "Tag successfully created!"})
+  } catch (error) {
+    res.status(400).json(error)
+  }
+  
 });
 
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
 }); 
 
-router.delete('/:id', (req, res) => {
+// * SUCCESSFUL ROUTE FOR DELETION
+router.delete('/:id', async (req, res) => {
   // delete on tag by its `id` value
   try {
     const deleteTag = await Tag.destroy({
