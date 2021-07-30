@@ -70,7 +70,7 @@ router.post('/', async (req, res) => {
     });
 });
 
-// ! NEED TO DEBUG AND RUN TEST
+// * SUCCESFUL PUT ROUTE FOR PRODUCTS
 // update product
 router.put('/:id', (req, res) => {
   // update product data
@@ -112,6 +112,7 @@ router.put('/:id', (req, res) => {
       res.status(400).json(err);
     });
 });
+
 
 // *SUCCESSFUL DELETE ROUTE
 router.delete('/:id', async (req, res) => {

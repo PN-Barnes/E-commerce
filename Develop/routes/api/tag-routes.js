@@ -50,6 +50,19 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
+  try {
+    const tagData = await Tag.update(req.body, {
+      where: {
+        tag_id: req.params.id
+      }
+    })
+    if(!tagData){
+      res.status(404).json({message: `Tag with ${req.params.id} is not found!`})
+    }
+    res.status(200).json({message: `Tag ${req.params.id} was updated successfully.`})
+  } catch (error) {
+    res.status(500).json(errors)
+  }
 }); 
 
 // * SUCCESSFUL ROUTE FOR DELETION
