@@ -36,11 +36,13 @@ Once that is completed, follow along with the walkthrough video to watch how to 
 
 [Mysql2](https://www.npmjs.com/package/mysql2)
 
+[Sequelize](https://sequelize.org/)
+
 [express](https://www.npmjs.com/package/express)
 
-[Inquirer](https://www.npmjs.com/package/inquirer)
-
 [Visual Studio Code](https://code.visualstudio.com/)
+
+[dotenv package](https://www.npmjs.com/package/dotenv)
 
 [GitHub Repository](https://github.com/PN-Barnes/PN-Barnes.github.io)
 
